@@ -15,13 +15,6 @@ module.exports.getAllUser = (req, res) => {
   const limit = Number(req.query?.limit);
   const result = allData.slice(0, limit);
 
-  if (!limit)
-    return res.send({
-      status: 406,
-      success: false,
-      result: "Please provide a number of limit",
-    });
-
   if (limit) {
     res.send({
       status: 200,
