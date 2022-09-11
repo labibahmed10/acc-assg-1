@@ -1,4 +1,5 @@
-const allData = require("../data.json");
+const fs = require("fs");
+const allData = JSON.parse(fs.readFileSync("data.json"));
 
 module.exports.getRamdomUser = (req, res) => {
   const randomNum = Math.floor(Math.random() * allData.length + 1);
@@ -31,3 +32,5 @@ module.exports.saveAUser = (req, res) => {
     res.send({ status: 200, success: true, result: "New User added Successfully" });
   }
 };
+
+module.exports.updateAUser = (req, res) => {};

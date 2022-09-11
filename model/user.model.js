@@ -11,4 +11,7 @@ router.get("/all", userController.getAllData);
 // save a single user
 router.post("/save", userController.saveAUser);
 
+// update a single user
+router.patch("/update", userController.updateAUser);
+
 module.exports = router;
