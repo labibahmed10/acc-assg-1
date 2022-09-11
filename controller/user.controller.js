@@ -25,7 +25,7 @@ module.exports.getAllUser = (req, res) => {
     res.send({
       status: 200,
       success: true,
-      message:"You can also use limit as a query",
+      message: "You can also use limit as a query",
       result: allData,
     });
   }
@@ -110,7 +110,7 @@ module.exports.updateMultipleUsers = (req, res) => {
       return res.send({
         status: 404,
         success: false,
-        message: "Id is not found in one of the object. Please write the 'id' with object",
+        result: "Id is not found in one of the object. Please write the 'id' with object",
       });
     }
 
@@ -124,7 +124,7 @@ module.exports.updateMultipleUsers = (req, res) => {
     } else {
       updatedUsers.push({
         success: false,
-        message: "User with this id does not exist.",
+        result: "User with this id does not exist.",
       });
     }
   });
