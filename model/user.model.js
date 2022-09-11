@@ -8,4 +8,7 @@ router.get("/random", userController.getRamdomUser);
 // getting all data here
 router.get("/all", userController.getAllData);
 
+// save a single user
+router.post("/save", userController.saveAUser);
+
 module.exports = router;
