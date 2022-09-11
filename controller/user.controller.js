@@ -4,7 +4,7 @@ const allData = JSON.parse(fs.readFileSync("data.json"));
 module.exports.getRamdomUser = (req, res) => {
   const randomNum = Math.floor(Math.random() * allData.length + 1);
   const randomPerson = allData.find((user) => user.id === randomNum);
-  console.log(randomPerson);
+
   res.send({
     success: true,
     result: randomPerson,
@@ -14,6 +14,14 @@ module.exports.getRamdomUser = (req, res) => {
 module.exports.getAllUser = (req, res) => {
   const limit = Number(req.query?.limit);
   const result = allData.slice(0, limit);
+
+  if (!limit)
+    return res.send({
+      status: 406,
+      success: false,
+      result: "Please provide a number of limit",
+    });
+
   if (limit) {
     res.send({
       status: 200,
@@ -70,7 +78,12 @@ module.exports.updateAUser = (req, res) => {
   }
 
   let updateUser = allData.find((user) => user.id === Number(id));
-  if (!updateUser) return res.send({ status: 404, success: false, result: "No user found on this id" });
+  if (!updateUser)
+    return res.send({
+      status: 404,
+      success: false,
+      result: "No user found on this id",
+    });
 
   const index = allData.indexOf(updateUser);
 
@@ -82,6 +95,52 @@ module.exports.updateAUser = (req, res) => {
 
   fs.writeFileSync("data.json", JSON.stringify(allData));
   res.send({ status: 200, success: true, result: "User Updated Successfully" });
+};
+
+module.exports.updateMultipleUsers = (req, res) => {
+  const updatingUsers = req.body;
+  const updatedUsers = [];
+
+  if (!Array.isArray(updatingUsers)) {
+    return res.send({
+      status: 406,
+      success: false,
+      result: "Please try to send an array like object where 'id' is mentioned",
+    });
+  }
+
+  updatingUsers.forEach((user) => {
+    const { id } = user;
+
+    if (!id) {
+      return res.send({
+        status: 404,
+        success: false,
+        message: "Id is not found in one of the object. Please write the 'id' with object",
+      });
+    }
+
+    const singleUserProfile = allData.find((us) => us.id === user.id);
+
+    if (singleUserProfile) {
+      const index = allData.indexOf(singleUserProfile);
+      const updatedUser = { ...singleUserProfile, ...user };
+      updatedUsers.push(updatedUser);
+      allData[index] = updatedUser;
+    } else {
+      updatedUsers.push({
+        success: false,
+        message: "User with this id does not exist.",
+      });
+    }
+  });
+  fs.writeFileSync("./data.json", JSON.stringify(allData));
+
+  res.send({
+    status: 200,
+    success: true,
+    result: "All User Updated Successfully",
+  });
 };
 
 module.exports.deleteAUser = (req, res) => {
