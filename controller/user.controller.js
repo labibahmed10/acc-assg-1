@@ -144,7 +144,7 @@ module.exports.updateMultipleUsers = (req, res) => {
 };
 
 module.exports.deleteAUser = (req, res) => {
-  const { id } = req.params;
+  const { id } = req.body;
 
   if (!id || isNaN(id)) {
     return res.send({
