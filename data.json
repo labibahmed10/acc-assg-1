@@ -1,1 +1,67 @@
-[{"id":1,"gender":"male","name":"mamma mia","contact":15121,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"," name":"mamma mia"},{"id":2,"gender":"female","name":"nasa wama","contact":15343521,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"},{"id":3,"gender":"male","name":"jonas jonson","contact":186521,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"},{"id":4,"gender":"female","name":"pori jonson","contact":17461,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"},{"id":5,"gender":"male","name":"nick corry","contact":13209842,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"},{"id":6,"gender":"female","name":"nick petamis","contact":13098209,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"},{"id":7,"gender":"male","name":"john cena","contact":42908123,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"},{"id":8,"gender":"female","name":"corry anderson","contact":90234877,"address":"Bangladesh","photoUrl":"https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"}]
+[
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "mamma mia",
+    "contact": 15121,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png",
+    " name": "mamma mia"
+  },
+  {
+    "id": 2,
+    "gender": "female",
+    "name": "nasa wama",
+    "contact": 15343521,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"
+  },
+  {
+    "id": 3,
+    "gender": "male",
+    "name": "jonas jonson",
+    "contact": 186521,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"
+  },
+  {
+    "id": 4,
+    "gender": "female",
+    "name": "pori jonson",
+    "contact": 17461,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"
+  },
+  {
+    "id": 5,
+    "gender": "male",
+    "name": "nick corry",
+    "contact": 13209842,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"
+  },
+  {
+    "id": 6,
+    "gender": "female",
+    "name": "nick petamis",
+    "contact": 13098209,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"
+  },
+  {
+    "id": 7,
+    "gender": "male",
+    "name": "john cena",
+    "contact": 42908123,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"
+  },
+  {
+    "id": 8,
+    "gender": "female",
+    "name": "corry anderson",
+    "contact": 90234877,
+    "address": "Bangladesh",
+    "photoUrl": "https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png"
+  }
+]

@@ -14,4 +14,7 @@ router.post("/save", userController.saveAUser);
 // update a single user
 router.patch("/update/:id", userController.updateAUser);
 
+// delete a single user
+router.delete("/delete/:id", userController.deleteAUser);
+
 module.exports = router;
