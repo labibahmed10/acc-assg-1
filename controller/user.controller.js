@@ -25,6 +25,7 @@ module.exports.getAllUser = (req, res) => {
     res.send({
       status: 200,
       success: true,
+      message:"You can also use limit as a query",
       result: allData,
     });
   }
